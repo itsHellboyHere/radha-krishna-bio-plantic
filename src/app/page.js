@@ -1,66 +1,66 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+export const metadata = {
+  title: "Radha Krishna Bio Plantic | Coming Soon",
+  description:
+    "Radha Krishna Bio Plantic — quality bio & tissue-culture plants. Chilkana Road, Saharanpur, U.P. Website launching soon.",
+};
 
 export default function Home() {
+  const phone = "+91 79769 86709";
+  const phoneTel = "+917976986709";
+  const whatsapp = "https://wa.me/917976986709";
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main
+      style={{
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        textAlign: "center",
+        padding: "24px",
+        fontFamily: "system-ui, sans-serif",
+      }}
+    >
+      <p style={{ fontSize: "13px", letterSpacing: "2px", opacity: 0.6 }}>
+        WEBSITE UNDER CONSTRUCTION
+      </p>
+
+      <h1 style={{ fontSize: "34px", margin: "12px 0 4px", fontWeight: 800 }}>
+        RADHA KRISHNA BIO PLANTIC
+      </h1>
+      <p style={{ fontSize: "15px", opacity: 0.75, margin: 0 }}>
+        Bio &amp; Tissue-Culture Plants
+      </p>
+
+      <div style={{ marginTop: "28px", lineHeight: 1.9, fontSize: "15px" }}>
+        <div><strong>Naresh Kumar</strong></div>
+        <div>Chilkana Road, Saharanpur &ndash; 247001, U.P.</div>
+        <div>
+          <a href={`tel:${phoneTel}`}>{phone}</a>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </div>
+
+      <div style={{ marginTop: "24px", display: "flex", gap: "12px" }}>
+        <a
+          href={`tel:${phoneTel}`}
+          style={{ padding: "10px 18px", border: "1px solid #333", borderRadius: "8px", textDecoration: "none", color: "inherit" }}
+        >
+          Call
+        </a>
+        <a
+          href={whatsapp}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ padding: "10px 18px", border: "1px solid #333", borderRadius: "8px", textDecoration: "none", color: "inherit" }}
+        >
+          WhatsApp
+        </a>
+      </div>
+
+      <p style={{ marginTop: "40px", fontSize: "12px", opacity: 0.4 }}>
+        Alpha preview &middot; Built by CreatorMonk
+      </p>
+    </main>
   );
 }
