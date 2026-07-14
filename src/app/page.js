@@ -15,9 +15,9 @@ export default function Home() {
   return (
     <main>
       <HeroCarousel/>
-      {/* <TrustStrip/> */}
-      {/* <AboutPreview/> */}
-      {/* <NurseryBand/> */}
+      <TrustStrip/>
+      <AboutPreview/>
+      <NurseryBand/>
     </main>
   );
 }
