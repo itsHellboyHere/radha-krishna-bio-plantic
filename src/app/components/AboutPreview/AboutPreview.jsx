@@ -79,7 +79,7 @@ export default function AboutPreview() {
             style={{ scale, borderRadius: radius, y }}
           >
             <motion.img
-              src="https://res.cloudinary.com/t3frjw0o/image/upload/f_auto,q_auto,w_800,ar_4:5,c_fill/v1783749412/af3e92c5-6727-4615-b107-3677ef6faaee_ufpoda.jpg"
+              src="https://res.cloudinary.com/t3frjw0o/image/upload/f_auto,q_50,w_800,ar_4:5,c_fill/v1783749412/af3e92c5-6727-4615-b107-3677ef6faaee_ufpoda.jpg"
               alt="Healthy saplings at Radha Krishna Bio Plantic nursery"
               className={styles.image}
               style={{ scale: imgScale }}
