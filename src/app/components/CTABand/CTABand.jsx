@@ -1,8 +1,8 @@
 import { Phone, MessageCircle } from "lucide-react";
 import styles from "./CTABand.module.css";
 
-const PHONE_TEL = "+917976986709";
-const WA = "https://wa.me/917976986709";
+const PHONE_TEL = "+919719676828";
+const WA = "https://wa.me/919719676828";
 
 export default function CTABand() {
   return (
@@ -39,7 +39,7 @@ export default function CTABand() {
             </a>
           </div>
 
-          <p className={styles.phoneLine}>{"+91 79769 86709"}</p>
+          <p className={styles.phoneLine}>{"+91 97196 76828"}</p>
         </div>
       </div>
     </section>

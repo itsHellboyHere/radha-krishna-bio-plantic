@@ -4,9 +4,9 @@ import { useState } from "react";
 import { Phone, MessageCircle, MapPin, ArrowUpRight } from "lucide-react";
 import styles from "./CTA.module.css";
 
-const PHONE_DISPLAY = "+91 79769 86709";
-const PHONE_TEL = "+917976986709";
-const WA_NUMBER = "917976986709";
+const PHONE_DISPLAY = "+91 97196 76828";
+const PHONE_TEL = "+919719676828";
+const WA_NUMBER = "919719676828";
 
 export default function CTA() {
   const [form, setForm] = useState({ name: "", phone: "", plant: "" });

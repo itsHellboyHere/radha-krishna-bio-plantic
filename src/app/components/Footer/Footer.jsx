@@ -45,9 +45,9 @@ export default function Footer() {
 
         <div className={styles.contactCol}>
           <h4>Contact</h4>
-          <a href="tel:+917976986709" className={styles.cRow}>
+          <a href="tel:+919719676828" className={styles.cRow}>
             <Phone size={16} strokeWidth={2.2} />
-            +91 79769 86709
+            +91 97196 76828
           </a>
           <div className={styles.cRow}>
             <MapPin size={16} strokeWidth={2.2} />
