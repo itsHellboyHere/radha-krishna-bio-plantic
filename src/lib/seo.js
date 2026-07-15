@@ -8,9 +8,9 @@ export const SITE = {
 
   contact: {
     person: "Naresh Kumar",
-    phone: "+917976986709",
-    phoneDisplay: "+91 79769 86709",
-    whatsapp: "917976986709",
+    phone: "+919719676828",
+    phoneDisplay: "+91 97196 76828",
+    whatsapp: "919719676828",
     street: "Chilkana Road",
     city: "Saharanpur",
     state: "Uttar Pradesh",

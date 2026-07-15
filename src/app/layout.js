@@ -8,6 +8,7 @@ import {
   localBusinessSchema,
   websiteSchema,
 } from "../lib/seo";
+import WhatsAppFloat from "./components/WhatsAppFloat/WhatsAppFloat";
 
 const display = Sora({
   subsets: ["latin"],
@@ -37,6 +38,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         {children}
         <Footer />
+        <WhatsAppFloat />
       </body>
     </html>
   );
