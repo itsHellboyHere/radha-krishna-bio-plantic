@@ -40,25 +40,15 @@ const productListSchema = {
   "@type": "ItemList",
   "@id": `${SITE.url}/product#list`,
   name: "Plants offered by Radha Krishna Bio Plantic",
+  description:
+    "Fruit, horticulture and sandalwood plants raised from superior mother stock in Saharanpur.",
   numberOfItems: PLANTS.length,
   itemListElement: PLANTS.map((p, i) => ({
     "@type": "ListItem",
     position: i + 1,
-    item: {
-      "@type": "Product",
-      name: `${p.name} Plant`,
-      alternateName: p.alt,
-      image: `${SITE.url}${p.img}`,
-      category: "Plant Nursery",
-      brand: { "@type": "Brand", name: SITE.name },
-      offers: {
-        "@type": "Offer",
-        availability: "https://schema.org/InStock",
-        priceCurrency: "INR",
-        seller: { "@id": `${SITE.url}/#business` },
-        url: `${SITE.url}/contact`,
-      },
-    },
+    name: `${p.name} Plant`,
+    image: `${SITE.url}${p.img}`,
+    url: `${SITE.url}/product`,
   })),
 };
 
