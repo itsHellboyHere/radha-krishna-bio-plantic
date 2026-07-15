@@ -6,23 +6,23 @@ import styles from "./HeroCarousel.module.css";
 
 const IMAGES = [
   {
-    src: "https://res.cloudinary.com/t3frjw0o/image/upload/f_auto,q_auto,w_600,ar_2:3,c_fill/v1783749412/697b0ddc-05f7-424e-b1aa-d0da29cc2c6e_m82d16.jpg",
+    src: "https://res.cloudinary.com/t3frjw0o/image/upload/f_auto,q_55,w_420,ar_2:3,c_fill/v1783749412/697b0ddc-05f7-424e-b1aa-d0da29cc2c6e_m82d16.jpg",
     alt: "Fruit sapling",
   },
   {
-    src: "https://res.cloudinary.com/t3frjw0o/image/upload/f_auto,q_auto,w_600,ar_2:3,c_fill/v1783749412/af3e92c5-6727-4615-b107-3677ef6faaee_ufpoda.jpg",
+    src: "https://res.cloudinary.com/t3frjw0o/image/upload/f_auto,q_55,w_420,ar_2:3,c_fill/v1783749412/af3e92c5-6727-4615-b107-3677ef6faaee_ufpoda.jpg",
     alt: "Fruit sapling",
   },
   {
-    src: "https://res.cloudinary.com/t3frjw0o/image/upload/f_auto,q_auto,w_600,ar_2:3,c_fill/v1783749412/e89c4d5e-2603-40af-972e-1036f81eda13_xkocl4.jpg",
+    src: "https://res.cloudinary.com/t3frjw0o/image/upload/f_auto,q_55,w_420,ar_2:3,c_fill/v1783749412/e89c4d5e-2603-40af-972e-1036f81eda13_xkocl4.jpg",
     alt: "Fruit sapling",
   },
   {
-    src: "https://res.cloudinary.com/t3frjw0o/image/upload/f_auto,q_auto,w_600,ar_2:3,c_fill/v1783749412/4e4cc422-be28-4508-8fd4-3b172cc66fd8_rsfjif.jpg",
+    src: "https://res.cloudinary.com/t3frjw0o/image/upload/f_auto,q_55,w_420,ar_2:3,c_fill/v1783749412/4e4cc422-be28-4508-8fd4-3b172cc66fd8_rsfjif.jpg",
     alt: "Fruit sapling",
   },
   {
-    src: "https://res.cloudinary.com/t3frjw0o/image/upload/f_auto,q_auto,w_600,ar_2:3,c_fill/v1783749411/07dd6235-dc48-41b4-be0f-e5682df5229f_ej2h9y.jpg",
+    src: "https://res.cloudinary.com/t3frjw0o/image/upload/f_auto,q_55,w_420,ar_2:3,c_fill/v1783749411/07dd6235-dc48-41b4-be0f-e5682df5229f_ej2h9y.jpg",
     alt: "Fruit sapling",
   },
 ];

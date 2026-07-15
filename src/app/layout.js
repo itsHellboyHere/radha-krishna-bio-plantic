@@ -1,6 +1,13 @@
 import { Sora, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
+import JsonLd from "./components/JsonLd";
+import {
+  buildMetadata,
+  localBusinessSchema,
+  websiteSchema,
+} from "../lib/seo";
 
 const display = Sora({
   subsets: ["latin"],
@@ -14,18 +21,23 @@ const body = Plus_Jakarta_Sans({
   display: "swap",
 });
 
-export const metadata = {
-  title: "Radha Krishna Bio Plantic",
+export const metadata = buildMetadata({
+  title: "Radha Krishna Bio Plantic | Plant Nursery in Saharanpur",
   description:
-    "Radha Krishna Bio Plantic — quality bio & tissue-culture plants, Saharanpur, U.P.",
-};
+    "Fruit, horticulture and sandalwood plants raised from superior mother stock. Doorstep delivery across Saharanpur, U.P. Call +91 79769 86709.",
+  path: "/",
+});
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${display.variable} ${body.variable}`}>
+    <html lang="en-IN" className={`${display.variable} ${body.variable}`}>
       <body>
-        <Navbar/>
-        {children}</body>
+        <JsonLd data={localBusinessSchema()} />
+        <JsonLd data={websiteSchema()} />
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

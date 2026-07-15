@@ -1,0 +1,154 @@
+.section {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 40px 20px 110px;
+}
+
+.band {
+  position: relative;
+  overflow: hidden;
+  border-radius: 32px;
+  padding: 72px 40px;
+  text-align: center;
+  background: linear-gradient(150deg, var(--forest-900), var(--green-800) 75%);
+}
+
+.glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+      600px 380px at 15% 15%,
+      rgba(76, 203, 153, 0.3),
+      transparent 60%
+    ),
+    radial-gradient(
+      560px 400px at 88% 90%,
+      rgba(34, 180, 127, 0.24),
+      transparent 60%
+    );
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  display: inline-flex;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #eafff4;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.heading {
+  margin-top: 20px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+  color: #fff;
+}
+
+.grad {
+  background: linear-gradient(135deg, #7ff0c0, #34d399);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.copy {
+  margin-top: 18px;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: rgba(238, 255, 247, 0.82);
+}
+
+.actions {
+  margin-top: 36px;
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.primary,
+.secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 15px 26px;
+  border-radius: 999px;
+  font-size: 0.98rem;
+  font-weight: 600;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.primary {
+  color: var(--forest-900);
+  background: #fff;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.22);
+}
+
+.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.3);
+}
+
+.secondary {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+.secondary:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 480px) {
+  .band {
+    padding: 52px 24px;
+  }
+  .primary,
+  .secondary {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Hindi lead line under heading */
+.hindiLead {
+  margin-top: 16px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--green-300);
+}
+
+/* copy ka top margin kam kiya, hindiLead upar aa gayi */
+.copy {
+  margin-top: 10px;
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: rgba(238, 255, 247, 0.78);
+}
+
+/* number ab buttons ke neeche alag line me */
+.phoneLine {
+  margin-top: 20px;
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #fff;
+}

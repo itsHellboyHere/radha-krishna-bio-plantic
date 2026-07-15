@@ -1,0 +1,135 @@
+.footer {
+  width: 100%;
+  background: linear-gradient(180deg, var(--forest-950), var(--forest-900));
+  color: rgba(238, 255, 247, 0.8);
+  padding: 70px 20px 30px;
+}
+
+.inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1.4fr;
+  gap: 48px;
+  padding-bottom: 44px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mark {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--gradient-brand);
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 17px;
+  color: #fff;
+}
+
+.brandText small {
+  font-family: var(--font-text);
+  font-weight: 600;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--green-300);
+}
+
+.tagline {
+  margin-top: 18px;
+  max-width: 340px;
+  font-size: 14px;
+  line-height: 1.65;
+  color: rgba(238, 255, 247, 0.62);
+}
+
+.linksCol h4,
+.contactCol h4 {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 18px;
+}
+
+.linksCol ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.linksCol a {
+  font-size: 14px;
+  color: rgba(238, 255, 247, 0.7);
+  transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.linksCol a:hover {
+  color: var(--green-300);
+  padding-left: 4px;
+}
+
+.cRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(238, 255, 247, 0.72);
+  margin-bottom: 14px;
+}
+
+.cRow svg {
+  color: var(--green-300);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+a.cRow:hover {
+  color: var(--green-300);
+}
+
+.bottom {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 13px;
+  color: rgba(238, 255, 247, 0.5);
+}
+
+.credit a {
+  color: var(--green-300);
+  font-weight: 600;
+}
+
+@media (max-width: 760px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+  .bottom {
+    justify-content: center;
+    text-align: center;
+  }
+}

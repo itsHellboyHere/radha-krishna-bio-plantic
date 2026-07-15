@@ -1,0 +1,140 @@
+.section {
+  width: 100%;
+  padding: 0 20px 110px;
+}
+
+.inner {
+  max-width: var(--container);
+  margin: 0 auto;
+}
+
+.heading {
+  font-size: clamp(1.8rem, 3.4vw, 2.7rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  color: var(--forest-900);
+  margin-bottom: 44px;
+}
+
+.grad {
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.headingHi {
+  display: block;
+  margin-top: 10px;
+  font-family: var(--font-text);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--green-700);
+}
+
+.list {
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+
+.row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 60px 1.1fr 1.4fr;
+  align-items: center;
+  gap: 24px;
+  padding: 30px 24px;
+  border-bottom: 1px solid var(--line);
+  overflow: hidden;
+  transition: color 0.35s ease;
+}
+
+.fill {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: var(--gradient-brand);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.row:hover .fill {
+  transform: scaleY(1);
+}
+
+.num,
+.rowMain,
+.rowBody {
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+.num {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--green-500);
+}
+
+.rowTitle {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--forest-900);
+}
+
+.rowHi {
+  display: block;
+  margin-top: 4px;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--green-600);
+}
+
+.rowBody {
+  font-size: 0.97rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+/* hover: sab white */
+.row:hover .num {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.row:hover .rowTitle {
+  color: #fff;
+}
+
+.row:hover .rowHi {
+  color: rgba(238, 255, 247, 0.85);
+}
+
+.row:hover .rowBody {
+  color: rgba(238, 255, 247, 0.9);
+}
+
+@media (max-width: 800px) {
+  .row {
+    grid-template-columns: 40px 1fr;
+    gap: 8px 14px;
+    padding: 24px 16px;
+  }
+  .rowBody {
+    grid-column: 2;
+    margin-top: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fill {
+    transition: none;
+  }
+}

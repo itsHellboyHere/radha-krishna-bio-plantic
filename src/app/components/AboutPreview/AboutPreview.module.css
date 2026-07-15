@@ -12,6 +12,10 @@
   align-items: center;
 }
 
+.left {
+  min-width: 0;
+}
+
 .eyebrow {
   display: inline-flex;
   align-items: center;
@@ -41,12 +45,20 @@
   color: transparent;
 }
 
+.hindiLead {
+  margin-top: 16px;
+  font-size: 1.02rem;
+  font-weight: 500;
+  line-height: 1.55;
+  color: var(--green-700);
+}
+
 .copy {
-  margin-top: 20px;
+  margin-top: 10px;
+  max-width: 520px;
   font-size: 1.05rem;
   line-height: 1.7;
   color: var(--text-muted);
-  max-width: 520px;
 }
 
 .points {
@@ -59,7 +71,7 @@
 
 .point {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 12px;
   font-size: 0.98rem;
   font-weight: 500;
@@ -72,9 +84,23 @@
   width: 24px;
   height: 24px;
   flex-shrink: 0;
+  margin-top: 1px;
   border-radius: 50%;
   color: #fff;
   background: var(--gradient-brand);
+}
+
+.pointText {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.35;
+}
+
+.pointText small {
+  margin-top: 3px;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--green-600);
 }
 
 .cta {
@@ -100,13 +126,15 @@
 .cta svg {
   transition: transform 0.2s ease;
 }
+
 .cta:hover svg {
   transform: translateX(3px);
 }
 
-/* right / image */
+/* ---------- right / image ---------- */
 .right {
   position: relative;
+  min-width: 0;
 }
 
 .glow {
@@ -125,10 +153,10 @@
 .imageCard {
   position: relative;
   z-index: 1;
-  border-radius: 28px;
   overflow: hidden;
   border: 1px solid rgba(15, 92, 67, 0.12);
   box-shadow: var(--shadow-lg);
+  will-change: transform;
 }
 
 .image {
@@ -136,6 +164,7 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  will-change: transform;
 }
 
 .badge {
@@ -160,14 +189,21 @@
 }
 
 @media (max-width: 860px) {
+  .section {
+    padding: 80px 20px;
+  }
   .inner {
     grid-template-columns: 1fr;
     gap: 44px;
   }
-  .section {
-    padding: 80px 20px;
-  }
   .right {
     max-width: 440px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .imageCard,
+  .image {
+    transform: none !important;
   }
 }

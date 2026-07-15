@@ -1,0 +1,151 @@
+.section {
+  width: 100%;
+  padding: 90px 20px 110px;
+}
+
+.inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.head {
+  position: sticky;
+  top: 130px;
+}
+
+.kicker {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--green-600);
+}
+
+.heading {
+  margin-top: 16px;
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--forest-900);
+}
+
+.heading em {
+  font-style: normal;
+  display: block;
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ---- steps ---- */
+.steps {
+  list-style: none;
+  min-width: 0;
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 22px;
+}
+
+.marker {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 6px;
+}
+
+.dot {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--gradient-brand);
+  box-shadow: 0 0 0 4px var(--green-100);
+  z-index: 1;
+}
+
+.line {
+  flex: 1;
+  width: 2px;
+  margin-top: 6px;
+  background: linear-gradient(var(--green-200), var(--green-100));
+}
+
+.step:last-child .line {
+  display: none;
+}
+
+.stepBody {
+  padding-bottom: 44px;
+  min-width: 0;
+}
+
+.step:last-child .stepBody {
+  padding-bottom: 0;
+}
+
+.stepNum {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--green-500);
+}
+
+.stepTitle {
+  margin-top: 8px;
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  color: var(--forest-900);
+}
+
+.stepHi {
+  display: block;
+  margin-top: 5px;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--green-600);
+}
+
+.stepText {
+  margin-top: 12px;
+  font-size: 0.97rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  max-width: 500px;
+}
+
+@media (max-width: 860px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .head {
+    position: static;
+  }
+}
+
+@media (max-width: 560px) {
+  .section {
+    padding: 70px 20px 80px;
+  }
+  .step {
+    grid-template-columns: 24px 1fr;
+    gap: 16px;
+  }
+  .stepBody {
+    padding-bottom: 34px;
+  }
+}
