@@ -131,21 +131,6 @@ export function localBusinessSchema() {
         closes: "18:00",
       },
     ],
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "Plants",
-      itemListElement: [
-        "Guava plants",
-        "Mosambi plants",
-        "Kagzi lemon plants",
-        "Sandalwood plants",
-        "Mango plants",
-        "Pomegranate plants",
-      ].map((n) => ({
-        "@type": "Offer",
-        itemOffered: { "@type": "Product", name: n },
-      })),
-    },
   };
 }
 
