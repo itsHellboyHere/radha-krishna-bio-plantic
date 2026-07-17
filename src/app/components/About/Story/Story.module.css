@@ -12,7 +12,7 @@
   align-items: start;
 }
 
-/* ---- image ---- */
+/* ---------- image column ---------- */
 .imageCol {
   min-width: 0;
 }
@@ -37,15 +37,45 @@
   display: block;
 }
 
+/* Est. 2014 badge on image */
+.estBadge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  font-family: var(--font-heading);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--green-700);
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: var(--shadow-sm);
+}
+
+.estBadge strong {
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--forest-900);
+}
+
 .caption {
   margin-top: 20px;
-  padding-left: 2px;
+  padding-left: 12px;
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.02em;
   color: var(--ink-2);
   border-left: 2px solid var(--green-500);
-  padding-left: 12px;
 }
 
 .caption span {
@@ -56,7 +86,43 @@
   color: var(--green-600);
 }
 
-/* ---- text ---- */
+/* founder credit */
+.founder {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 22px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.founderRule {
+  width: 3px;
+  align-self: stretch;
+  min-height: 34px;
+  flex-shrink: 0;
+  border-radius: 999px;
+  background: var(--gradient-brand);
+}
+
+.founder strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--forest-900);
+}
+
+.founder small {
+  display: block;
+  margin-top: 3px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--green-600);
+}
+
+/* ---------- text column ---------- */
 .textCol {
   min-width: 0;
   padding-top: 8px;
@@ -133,17 +199,30 @@
   max-width: 480px;
 }
 
+/* ---------- responsive ---------- */
 @media (max-width: 900px) {
   .inner {
     grid-template-columns: 1fr;
     gap: 48px;
   }
+
   .sticky {
     position: static;
   }
+
   .frame {
     border-radius: 4px 4px 140px 140px;
     max-width: 380px;
+  }
+
+  .caption,
+  .founder {
+    max-width: 380px;
+  }
+
+  .estBadge {
+    top: 12px;
+    left: 12px;
   }
 }
 
@@ -151,6 +230,7 @@
   .section {
     padding: 80px 20px;
   }
+
   .block {
     grid-template-columns: 44px 1fr;
     gap: 10px;

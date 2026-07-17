@@ -1,5 +1,8 @@
 import styles from "./Story.module.css";
 
+const FOUNDED = 2014;
+const YEARS = new Date().getFullYear() - FOUNDED;
+
 const BLOCKS = [
   {
     n: "01",
@@ -9,9 +12,9 @@ const BLOCKS = [
   },
   {
     n: "02",
-    title: "Years of hands in the soil",
-    hi: "वर्षों का अनुभव",
-    body: "Our nursery on Chilkana Road has been raising plants long enough to know what Saharanpur soil asks for. That knowledge doesn't come from books — it comes from seasons.",
+    title: `${YEARS} years of hands in the soil`,
+    hi: `${FOUNDED} से लगातार`,
+    body: `Since ${FOUNDED}, our nursery on Chilkana Road has raised plants long enough to know what Saharanpur soil asks for. That knowledge doesn't come from books — it comes from seasons.`,
   },
   {
     n: "03",
@@ -29,24 +32,38 @@ export default function Story() {
           <div className={styles.sticky}>
             <div className={styles.frame}>
               <img
-                src="https://res.cloudinary.com/t3frjw0o/image/upload/f_auto,q_auto,w_900,ar_3:4,c_fill/v1784085066/fe6ce7c1-59aa-4304-b402-14a7f1cbfd7a_t3rvoe.jpg"
+                // src="https://res.cloudinary.com/t3frjw0o/image/upload/f_auto,q_auto,w_900,ar_3:4,c_fill/v1784085066/fe6ce7c1-59aa-4304-b402-14a7f1cbfd7a_t3rvoe.jpg"
+                src="https://res.cloudinary.com/t3frjw0o/image/upload/f_auto,q_auto,w_900,ar_3:4,c_fill/v1784307347/Eucalyptus_t7dvff.jpg"
                 alt="Radha Krishna Bio Plantic nursery, Saharanpur"
                 className={styles.image}
                 loading="lazy"
               />
+              <span className={styles.estBadge}>
+                Est.
+                <strong>{FOUNDED}</strong>
+              </span>
             </div>
+
             <p className={styles.caption}>
               Chilkana Road, Saharanpur
               <span>चिलकाना रोड, सहारनपुर</span>
             </p>
+
+            <div className={styles.founder}>
+              <span className={styles.founderRule} aria-hidden="true" />
+              <div>
+                <strong>Satpal Singh</strong>
+                <small>Managing Director · प्रबंध निदेशक</small>
+              </div>
+            </div>
           </div>
         </div>
 
         <div className={styles.textCol}>
           <p className={styles.lede}>
-            We're a family-run nursery raising fruit, horticulture and
-            sandalwood plants — the kind farmers come back for, season after
-            season.
+            Founded on 1 July {FOUNDED}, we're a family-run nursery raising
+            fruit and timber plants — the kind farmers come back for, season
+            after season.
           </p>
           <p className={styles.ledeHi}>
             एक भरोसेमंद नर्सरी — जहाँ हर पौधा मेहनत से तैयार होता है।

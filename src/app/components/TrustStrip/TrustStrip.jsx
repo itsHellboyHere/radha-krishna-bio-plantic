@@ -1,7 +1,15 @@
-import { Truck, Leaf, PhoneCall, BadgeCheck } from "lucide-react";
+import { Award, Truck, Leaf, PhoneCall } from "lucide-react";
 import styles from "./TrustStrip.module.css";
 
+const FOUNDED = 2014;
+const YEARS = new Date().getFullYear() - FOUNDED;
+
 const ITEMS = [
+  {
+    icon: Award,
+    title: `Since ${FOUNDED}`,
+    sub: `${YEARS}+ years of trusted nursery work`,
+  },
   {
     icon: Truck,
     title: "Doorstep Delivery",
@@ -16,11 +24,6 @@ const ITEMS = [
     icon: PhoneCall,
     title: "On-Call Guidance",
     sub: "Expert advice whenever you need it",
-  },
-  {
-    icon: BadgeCheck,
-    title: "Superior Mother Stock",
-    sub: "Raised from high-yielding parent plants",
   },
 ];
 

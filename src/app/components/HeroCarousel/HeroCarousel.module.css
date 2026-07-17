@@ -164,3 +164,45 @@
     right: 2%;
   }
 }
+.since {
+  position: relative;
+  display: inline-block;
+  padding: 1px 7px;
+  margin-right: 1px;
+  border-radius: 6px;
+  font-weight: 700;
+  color: var(--green-800);
+  background: linear-gradient(
+    to bottom,
+    rgba(134, 224, 188, 0.28),
+    rgba(76, 203, 153, 0.32)
+  );
+  white-space: nowrap;
+}
+
+.since::after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  right: 7px;
+  bottom: 2px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--gradient-brand);
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: draw 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.7s forwards;
+}
+
+@keyframes draw {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .since::after {
+    animation: none;
+    transform: scaleX(1);
+  }
+}
